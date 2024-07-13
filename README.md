@@ -1,0 +1,1 @@
+ms-email-service: Email service in charge of listening to new customer register event and sending email verification.
