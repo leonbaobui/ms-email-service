@@ -1,6 +1,6 @@
 package com.twitter.email.listener;
 
-import com.gmail.merikbest2015.dto.request.EmailRequest;
+import main.java.com.leon.baobui.dto.request.EmailRequest;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import lombok.RequiredArgsConstructor;
