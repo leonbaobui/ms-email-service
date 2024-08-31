@@ -1,0 +1,32 @@
+server:
+  port : 8082
+rabbitmq:
+  internal-mail:
+    exchanges: internal.exchange
+    listener:
+      queue-name: email-queue
+    routing-key: internal.mail.routing-key
+
+spring:
+  application:
+    name: ms-email-service
+  mail:
+    host: smtp.gmail.com
+    username: walkerelot16@gmail.com
+    password: 'jhyb dxbj teez hwjq'
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    hostname: ${EUREKA_HOST:localhost}
