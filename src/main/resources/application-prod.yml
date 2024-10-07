@@ -32,7 +32,7 @@ spring:
 
 eureka:
   instance:
-    hostname: ms-email-service-y4a3.onrender.comg  # Public domain name
+    hostname: ms-email-service-taww.onrender.com  # Public domain name
     nonSecurePort: 80  # Standard HTTP port
     securePortEnabled: false  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address
