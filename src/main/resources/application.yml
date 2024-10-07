@@ -12,8 +12,8 @@ spring:
     name: ms-email-service
   mail:
     host: smtp.gmail.com
-    username: walkerelot16@gmail.com
-    password: 'jhyb dxbj teez hwjq'
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     port: 587
     properties:
       mail:
