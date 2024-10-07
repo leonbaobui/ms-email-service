@@ -17,14 +17,11 @@ spring:
   application:
     name: ms-email-service
   rabbitmq:
-    addresses: amqps://gqupsbui:sNGBVBZF4XIuUNvAnYWfOWJ8mUiUTUAr@armadillo.rmq.cloudamqp.com/gqupsbui
-#    host: rabbitmq-xldo.onrender.com
-#    username: rabbitmq
-#    password: rabbitmq
+    addresses: amqps://${RABBITMQ_USERNAME}:${RABBITMQ_PASSWORD}@armadillo.rmq.cloudamqp.com/${RABBITMQ_USERNAME}
   mail:
     host: smtp.gmail.com
-    username: walkerelot16@gmail.com
-    password: 'jhyb dxbj teez hwjq'
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     port: 587
     properties:
       mail:
@@ -35,7 +32,7 @@ spring:
 
 eureka:
   instance:
-    hostname: ms-email-service-y4a3.onrender.comg  # Public domain name
+    hostname: ms-email-service-taww.onrender.com  # Public domain name
     nonSecurePort: 80  # Standard HTTP port
     securePortEnabled: false  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address

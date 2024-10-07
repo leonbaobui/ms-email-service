@@ -1,0 +1,42 @@
+server:
+  port : 8080
+rabbitmq:
+  internal-mail:
+    exchanges: internal.exchange
+    listener:
+      queue-name: email-queue
+    routing-key: internal.mail.routing-key
+
+spring:
+  application:
+    name: ms-email-service
+  rabbitmq:
+    addresses: amqps://gqupsbui:sNGBVBZF4XIuUNvAnYWfOWJ8mUiUTUAr@armadillo.rmq.cloudamqp.com/gqupsbui
+#    host: rabbitmq-xldo.onrender.com
+#    username: rabbitmq
+#    password: rabbitmq
+  mail:
+    host: smtp.gmail.com
+    username: walkerelot16@gmail.com
+    password: 'jhyb dxbj teez hwjq'
+    port: 587
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+
+eureka:
+  instance:
+    hostname: ms-email-service.onrender.com  # Public domain name
+    nonSecurePort: 80  # Standard HTTP port
+    securePortEnabled: false  # Enable if you're using HTTPS
+    preferIpAddress: false  # Use the hostname instead of the IP address
+    statusPageUrlPath: /actuator/info  # Default status page path
+    healthCheckUrlPath: /actuator/health  # Default health check path
+  client:
+    serviceUrl:
+      defaultZone: https://ms-eureka-server-syh2.onrender.com/eureka
+    fetch-registry: true
+    register-with-eureka: true
