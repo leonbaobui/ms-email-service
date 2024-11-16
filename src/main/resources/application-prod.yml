@@ -32,7 +32,7 @@ spring:
 
 eureka:
   instance:
-    hostname: ms-email-service-taww.onrender.com  # Public domain name
+    hostname: ${MS_EMAIL_HOST}  # Public domain name
     nonSecurePort: 80  # Standard HTTP port
     securePortEnabled: false  # Enable if you're using HTTPS
     preferIpAddress: false  # Use the hostname instead of the IP address
@@ -40,6 +40,6 @@ eureka:
     healthCheckUrlPath: /actuator/health  # Default health check path
   client:
     serviceUrl:
-      defaultZone: https://ms-eureka-server-2cvn.onrender.com/eureka
+      defaultZone: "${MS_EUREKA_URL}/eureka"
     fetch-registry: true
     register-with-eureka: true
